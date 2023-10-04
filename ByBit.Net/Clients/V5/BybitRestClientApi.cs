@@ -28,6 +28,8 @@ namespace Bybit.Net.Clients.V5
         /// <inheritdoc />
         public event Action<OrderId>? OnOrderCanceled;
 
+        public BybitRestClientApiUser User { get; }
+
         /// <inheritdoc />
         public ISpotClient CommonSpotClient => this;
 
@@ -63,7 +65,7 @@ namespace Bybit.Net.Clients.V5
             Account = new BybitRestClientApiAccount(this);
             ExchangeData = new BybitRestClientApiExchangeData(this);
             Trading = new BybitRestClientApiTrading(this);
-
+            User = new BybitRestClientApiUser(this);
             requestBodyFormat = RequestBodyFormat.Json;
             ParameterPositions[HttpMethod.Delete] = HttpMethodParameterPosition.InUri;
         }

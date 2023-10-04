@@ -23,6 +23,11 @@ namespace Bybit.Net.Interfaces.Clients.V5
         BybitRestClientApiTrading Trading { get; }
 
         /// <summary>
+        /// Endpoints related to subaccounts
+        /// </summary>
+        BybitRestClientApiUser User { get; }
+
+        /// <summary>
         /// Get the ISpotClient for this client. This is a common interface which allows for some basic operations without knowing any details of the exchange.
         /// </summary>
         /// <returns></returns>
