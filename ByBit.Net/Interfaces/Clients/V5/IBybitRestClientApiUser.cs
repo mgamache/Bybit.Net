@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 using Bybit.Net.Enums.V5;
+using System.Security;
 
 namespace Bybit.Net.Interfaces.Clients.V5
 {
@@ -29,5 +30,7 @@ namespace Bybit.Net.Interfaces.Clients.V5
         /// <returns></returns>
         Task<WebCallResult<CreateSubUIDResponse>> CreateSubMember(string username, AccountMemberType memberType, string? password,  bool? quickLogin,bool? isUta ,string? note, CancellationToken ct = default);
 
+
+     
     }
 }
